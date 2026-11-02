@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop affordable gym wear, activewear, leggings, sports bras, hoodies and training clothes from ShadiFitFlex.">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="Java script/catalog.js" defer></script>
+    <title>ShadiFitFlex | Gym Wear Shop</title>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <h1>ShadiFitFlex</h1>
+
+        <nav class="site-nav" aria-label="Main navigation">
+            <img class="logo" src="images/logo1.png" alt="ShadiFitFlex logo">
+            <a href="index.html">Home</a> |
+            <a href="About.html">About Us</a> |
+            <a href="Products.html">Products</a> |
+            <a href="Enquiry.html">Enquiry</a> |
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="site-main">
+
+        <h2>Our Products</h2>
+
+        <p>
+            Explore our range of stylish, comfortable and affordable gym wear.
+        </p>
+
+        <section class="catalog-controls" aria-label="Product filtering controls">
+            <div class="filter-group">
+                <label for="product-search">Search by product name</label>
+                <input id="product-search" type="search" placeholder="Search products">
+            </div>
+
+            <div class="filter-group">
+                <label for="category-filter">Filter by category</label>
+                <select id="category-filter">
+                    <option value="All">All categories</option>
+                    <option value="Tops">Tops</option>
+                    <option value="Bottoms">Bottoms</option>
+                    <option value="Outerwear">Outerwear</option>
+                </select>
+            </div>
+        </section>
+
+        <section id="product-grid" class="product-grid" aria-live="polite"></section>
+
+        <div id="empty-state" class="empty-state hidden" aria-live="polite">
+            No products match your current search.
+        </div>
+
+        <section class="store-section">
+            <h3>Pickup locations</h3>
+            <div id="store-list" class="store-list"></div>
+        </section>
+
+    </main>
+
+    <div id="image-modal" class="image-modal hidden" aria-hidden="true">
+        <div class="modal-content">
+            <button id="close-modal" class="close-modal" type="button" aria-label="Close image view">Close</button>
+            <img id="modal-image" src="" alt="Product preview">
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 ShadiFitFlex. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

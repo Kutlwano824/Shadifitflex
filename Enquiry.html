@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send an enquiry for ShadiFitFlex gym wear, sizes, quantities, and stock questions for training clothing and activewear.">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="Java script/catalog.js" defer></script>
+    <title>ShadiFitFlex | Product Enquiry</title>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <h1>ShadiFitFlex</h1>
+
+        <nav class="site-nav" aria-label="Main navigation">
+            <img class="logo" src="images/logo1.png" alt="ShadiFitFlex logo">
+            <a href="index.html">Home</a> |
+            <a href="About.html">About Us</a> |
+            <a href="Products.html">Products</a> |
+            <a href="Enquiry.html">Enquiry</a> |
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="site-main">
+
+        <h2>Product Enquiry</h2>
+
+        <p>
+            Complete the form below and tell us what you are looking for.
+        </p>
+
+        <form id="enquiry-form" class="stacked-form" novalidate>
+
+            <div class="field-group">
+                <label for="customer-name">Full Name:</label>
+                <input type="text" id="customer-name" name="customer-name">
+                <span id="customer-name-error" class="error-message" aria-live="polite"></span>
+            </div>
+
+            <div class="field-group">
+                <label for="customer-email">Email Address:</label>
+                <input type="email" id="customer-email" name="customer-email">
+                <span id="customer-email-error" class="error-message" aria-live="polite"></span>
+            </div>
+
+            <div class="field-group">
+                <label for="enquiry-product">Product:</label>
+                <select id="enquiry-product" name="enquiry-product">
+                    <option value="">Select a product</option>
+                </select>
+                <span id="enquiry-product-error" class="error-message" aria-live="polite"></span>
+            </div>
+
+            <div class="field-group">
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="">Select size</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+                <span id="size-error" class="error-message" aria-live="polite"></span>
+            </div>
+
+            <div class="field-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+                <span id="quantity-error" class="error-message" aria-live="polite"></span>
+            </div>
+
+            <div class="field-group">
+                <label for="enquiry-message">Additional Message:</label>
+                <textarea id="enquiry-message" name="enquiry-message" rows="5" placeholder="Tell us about your preferred item, fit, or bulk order."></textarea>
+            </div>
+
+            <div id="enquiry-summary" class="summary-box hidden" aria-live="polite"></div>
+
+            <div class="form-buttons">
+                <input type="submit" value="Send Enquiry">
+                <input type="reset" value="Clear Form">
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 ShadiFitFlex. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,385 @@
+/* Simple reset for consistent browser styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black: #101010;
+    --dark-grey: #1b1b1b;
+    --grey: #b8b8b8;
+    --light-grey: #f2f2f2;
+    --neon: #c7ff00;
+    --danger: #ff7d7d;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--light-grey);
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.site-header,
+.site-main,
+.site-footer {
+    width: 90%;
+    max-width: 70rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.site-header {
+    display: grid;
+    grid-template-areas:
+        "title title"
+        "tagline tagline"
+        "navigation navigation";
+    padding: 2rem 0 1rem;
+    border-bottom: 1px solid var(--grey);
+}
+
+.site-header h1 {
+    grid-area: title;
+    color: var(--neon);
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.tagline {
+    grid-area: tagline;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+.site-nav {
+    grid-area: navigation;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 5rem;
+    height: 4.25rem;
+    object-fit: contain;
+    margin-right: 1rem;
+}
+
+.site-nav a {
+    color: var(--light-grey);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus,
+.site-nav a:active {
+    color: var(--neon);
+}
+
+.site-main {
+    padding: 3rem 0;
+}
+
+h2,
+h3,
+h4 {
+    color: var(--neon);
+    line-height: 1.2;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.35rem;
+}
+
+h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+p,
+ul {
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+a {
+    color: var(--neon);
+}
+
+.button-link,
+input[type="submit"],
+input[type="reset"],
+.secondary-button,
+.close-modal {
+    display: inline-block;
+    border: 2px solid var(--neon);
+    background-color: var(--neon);
+    color: var(--black);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    padding: 0.65rem 1rem;
+    text-decoration: none;
+}
+
+.button-link:hover,
+.button-link:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+.secondary-button:hover,
+.secondary-button:focus,
+.close-modal:hover,
+.close-modal:focus {
+    background-color: var(--black);
+    color: var(--neon);
+}
+
+.info-box {
+    background-color: var(--dark-grey);
+    border: 1px solid var(--grey);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-grey);
+    border: 1px solid var(--grey);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+}
+
+.product-card h3 {
+    margin-top: 0;
+}
+
+.product-images {
+    margin-bottom: 1rem;
+}
+
+.product-image-button {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.product-images img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 1px solid var(--grey);
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.status-badge {
+    color: var(--neon);
+    font-weight: 700;
+}
+
+.price {
+    color: var(--neon);
+    font-weight: 700;
+    margin-top: auto;
+}
+
+.catalog-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.empty-state,
+.form-feedback,
+.summary-box {
+    margin-top: 1rem;
+    background-color: var(--dark-grey);
+    border: 1px solid var(--grey);
+    padding: 1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.store-section {
+    margin-top: 3rem;
+}
+
+.store-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.store-card {
+    background-color: var(--dark-grey);
+    border: 1px solid var(--grey);
+    padding: 1rem;
+}
+
+.image-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 10;
+}
+
+.modal-content {
+    background-color: var(--black);
+    border: 1px solid var(--grey);
+    padding: 1rem;
+    max-width: 38rem;
+    width: 100%;
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+.close-modal {
+    margin-bottom: 1rem;
+}
+
+.stacked-form,
+form {
+    max-width: 40rem;
+    background-color: var(--dark-grey);
+    border: 1px solid var(--grey);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+}
+
+.field-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: inline-block;
+    color: var(--neon);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid var(--grey);
+    background-color: var(--black);
+    color: var(--light-grey);
+    font: inherit;
+    padding: 0.65rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--neon);
+    outline: 2px solid var(--neon);
+}
+
+.error-message {
+    display: block;
+    min-height: 1.2rem;
+    color: var(--danger);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.site-footer {
+    border-top: 1px solid var(--grey);
+    color: var(--grey);
+    padding: 1.5rem 0;
+}
+
+@media (max-width: 48rem) {
+    .site-header,
+    .site-main,
+    .site-footer {
+        width: 92%;
+    }
+
+    .site-header h1 {
+        font-size: 2rem;
+    }
+
+    .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        margin-bottom: 0.5rem;
+    }
+
+    .product-grid,
+    .catalog-controls,
+    .store-list {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 1.65rem;
+    }
+}
